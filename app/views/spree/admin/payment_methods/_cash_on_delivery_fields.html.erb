@@ -1,0 +1,15 @@
+<br>
+  <%= collection_select(:payment_method, :preferred_country, Spree::Country.all, :iso3, :name, {}, {class: 'select2', multiple: true})%>
+</div>
+<div data-hook="display" class="form-group">
+  <%= label_tag :payment_method_preferred_shopper_email, Spree.t(:shopper_email) %>
+  <%= text_field(:payment_method, :preferred_shopper_email, class: 'form-control' )%>
+</div>
+<div data-hook="display" class="form-group">
+  <%= label_tag :payment_method_preferred_merchant_address, Spree.t(:merchant_address) %>
+  <%= text_area(:payment_method, :preferred_merchant_address, class: 'form-control' )%>
+</div>
+<div data-hook="display" class="form-group">
+  <%= label_tag :payment_method_preferred_test_mode, Spree.t(:test_mode) %>
+  <%= check_box(:payment_method, :preferred_test_mode)%>
+</div>
